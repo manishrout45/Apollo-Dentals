@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.main-heading {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800; /* or 900 depending on boldness you want */
-    letter-spacing: 0.05em; /* optional: matches your screenshot */
-}
-
   /* Hide scrollbar for Chrome, Safari, Edge */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -20,74 +12,13 @@
     scrollbar-width: none;
   }
 
-/* Default nav-item (Desktop Style) */
-.nav-item {
-    padding: 8px 18px;
-    border-radius: 9999px;
-    font-weight: 500;
-    color: #000000;   /* Black for desktop */
-    transition: 0.2s ease;
-}
-
-/* Hover for desktop */
-.nav-item:hover {
-    background-color: #0e9151;
-    color: #ffffff;
-}
-
-/* Active for both */
-.active-item {
-    background-color: #0e9151;
-    color: #ffffff !important;
-}
-
-/* MOBILE NAVIGATION TEXT COLOR (White) */
-#mobile-menu .nav-item {
-    color: #ffffff;   /* White for mobile */
+.main-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* or 900 depending on boldness you want */
+    letter-spacing: 0.05em; /* optional: matches your screenshot */
 }
 
 
-/* Smooth scroll animation (lag-free) */
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(20px) scale(0.99);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.scroll-animate.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-  .shine-btn {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .shine-btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.6),
-      transparent
-    );
-    transform: skewX(-20deg);
-  }
-
-  .shine-btn:hover::after {
-    animation: shine 0.7s ease-out forwards;
-  }
-
-  @keyframes shine {
-    0% { left: -100%; }
-    100% { left: 150%; }
-  }
 
 
 @keyframes bgBounce {
@@ -101,37 +32,6 @@
   animation: bgBounce 10s ease-in-out infinite;
 }
 
-
-/* Overlay diagonal reveal */
-  .diagonal-overlay {
-    transform: scale(0) translate(100%, 100%);
-    transform-origin: bottom right;
-  }
-
-  .group:hover .diagonal-overlay {
-    transform: scale(1) translate(0, 0);
-  }
-
-  .diagonal-overlay,
-  .group:hover .diagonal-overlay {
-    transition: all 0.5s ease-in-out;
-  }
-
-  /* Bounce animation */
-  .bounce-hover {
-    transition: transform 0.6s ease;
-  }
-  .bounce-hover:hover {
-    animation: bounceEffect 0.6s ease;
-  }
-
-  @keyframes bounceEffect {
-    0% { transform: scale(1); }
-    40% { transform: scale(1.06); }
-    60% { transform: scale(0.97); }
-    80% { transform: scale(1.03); }
-    100% { transform: scale(1); }
-  }
 
 /* Initial states */
 .fade-up {
@@ -166,12 +66,126 @@
   opacity: 1;
   transform: translateX(0) translateY(0) scale(1);
 }
+.mask-btn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+.mask-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff; /* color of shine/scratched effect */
+  opacity: 0.2;        /* lower opacity = softer effect */
+
+  /* MASK SPRITE */
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+
+  /* Start hidden */
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Hover Animation */
+.mask-btn:hover::before {
+  animation: mask-forward 0.7s steps(22) forwards;
+  opacity: 1;
+}
+
+/* Reverse when mouse leaves */
+.mask-btn:not(:hover)::before {
+  animation: mask-reverse 0.7s steps(22) forwards;
+}
+
+/* Keyframes */
+@keyframes mask-forward {
+  from { mask-position: 0 0; -webkit-mask-position: 0 0; }
+  to   { mask-position: 100% 0; -webkit-mask-position: 100% 0; }
+}
+
+@keyframes mask-reverse {
+  from { mask-position: 100% 0; -webkit-mask-position: 100% 0; }
+  to   { mask-position: 0 0; -webkit-mask-position: 0 0; }
+}
 
 
-  /* Hover Zoom */
-  .card-hover img {
-    transition: transform 0.5s ease;
-  }
-  .card-hover:hover img {
-    transform: scale(1.05);
-  }
+
+
+
+/* ----------- FADE-UP PARAGRAPH ANIMATION ----------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade-Right (new)               */
+/* ------------------------------ */
+.fade-right {
+  opacity: 0;
+  transform: translateX(-50px); /* start from left */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* ----------- ACTIVE CLASS (added automatically in React) ----------- */
+.show {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+}
+/* Main circle */
+.cursor-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 123, 156, 0.4);
+  border: 2px solid #007B9C;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Trailing circles */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 123, 156, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  filter: blur(6px);
+}
+
+/* Hover effect: enlarge cursor on interactive elements */
+button:hover ~ .cursor-circle,
+a:hover ~ .cursor-circle {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 123, 0, 0.4);
+  border-color: orange;
+}
+
+/* Section color inversion */
+.bg-teal .cursor-circle {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: #ffffff;
+}
+
+.bg-teal .cursor-trail {
+  background: rgba(255, 255, 255, 0.2);
+}

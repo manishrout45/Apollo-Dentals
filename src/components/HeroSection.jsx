@@ -8,19 +8,19 @@ export default function HeroSection() {
 
         {/* LEFT CONTENT */}
         <div className="space-y-5 md:mt-10 ">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
+          <h1 className="fade-right text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
             We Are Providing <br />
             <span className="text-[#007B9C]">Best Health Services</span>
           </h1>
 
-          <p className="text-gray-500 text-sm md:text-base w-[95%]">
+          <p className="fade-up text-gray-500 text-sm md:text-base w-[95%]">
             Our skilled doctors have tremendous experience. It is a long established
             fact that a reader will be distracted by the readable content.
           </p>
 
           {/* Appointment Box */}
           <div className="bg-white shadow-lg rounded-lg p-4 mt-6">
-            <h3 className="font-semibold text-gray-700 mb-3">Book an appointment</h3>
+            <h3 className="fade-right font-semibold text-gray-700 mb-3">Book an appointment</h3>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               
@@ -28,7 +28,7 @@ export default function HeroSection() {
               <div className="flex items-center border rounded-lg px-3 py-2 gap-2">
                 <FaMapMarkerAlt className="text-[#007B9C]" />
                 <select className="w-full outline-none text-gray-600 text-sm">
-                  <option>Dhaka, Bangladesh</option>
+                  <option>Bhubaneswar,Odisha </option>
                   <option>Delhi, India</option>
                   <option>Dubai, UAE</option>
                 </select>
@@ -55,7 +55,7 @@ export default function HeroSection() {
               </div>
 
               {/* Search Button */}
-              <button className="bg-[#00C16E] text-white font-semibold rounded-lg px-3 py-2 hover:bg-[#00aa5e]">
+              <button className="mask-btn bg-[#00C16E] text-white font-semibold rounded-lg px-3 py-2 hover:bg-[#00aa5e]">
                 Search →
               </button>
             </div>

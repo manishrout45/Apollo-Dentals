@@ -37,7 +37,7 @@ const Home = () => {
 
           {/* Description Paragraph */}
           {/* Description Paragraph */}
-            <p className="text-gray-600 mt-3 leading-relaxed text-sm md:text-base">
+            <p className="fade-up text-gray-600 mt-3 leading-relaxed text-sm md:text-base">
               Apollo Dental Care is one of the region’s leading dental clinics, offering 
               trustworthy, professional, and patient-focused dental services across all 
               major specialties.
@@ -49,7 +49,7 @@ const Home = () => {
             </p>
 
           {/* Stats Boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+          <div className="fade-up grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
 
             {/* Box 1 */}
             <div className="bg-[#007B9C] text-white rounded-xl p-6 text-center shadow-md 
@@ -100,13 +100,13 @@ const Home = () => {
       </h2>
 
       {/* Sub Text */}
-      <p className="text-base sm:text-lg font-light max-w-md text-gray-700">
+      <p className="fade-up text-base sm:text-lg font-light max-w-md text-gray-700">
         Get personalized dental care from our experienced specialists.  
         Book your appointment today for a healthy, confident smile.
       </p>
 
       {/* Bullet Points */}
-      <ul className="space-y-3 text-sm sm:text-base text-gray-700">
+      <ul className="fade-up space-y-3 text-sm sm:text-base text-gray-700">
         <li className="flex items-center gap-3">
           <span className="w-3 h-3 bg-[#007B9C] rounded-full"></span>
           Certified & Experienced Specialists
@@ -127,10 +127,10 @@ const Home = () => {
     {/* ------------------------ */}
     {/* RIGHT SIDE : FORM CARD   */}
     {/* ------------------------ */}
-    <div className="bg-white p-8 rounded-3xl shadow-xl border">
+    <div className="fade-right bg-white p-8 rounded-3xl shadow-xl border">
 
       {/* Form Heading */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+      <h3 className="text-2xl font-bold text-orange-500 mb-6 text-center">
         Schedule Your Visit
       </h3>
 
@@ -144,7 +144,7 @@ const Home = () => {
             type="text"
             placeholder="Enter your name"
             className="w-full border border-gray-300 rounded-lg px-4 py-3 
-                       focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
+                      focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
           />
         </div>
 
@@ -155,7 +155,7 @@ const Home = () => {
             type="text"
             placeholder="Enter mobile number"
             className="w-full border border-gray-300 rounded-lg px-4 py-3 
-                       focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
+                      focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
           />
         </div>
 
@@ -164,7 +164,7 @@ const Home = () => {
           <label className="block text-gray-700 font-medium mb-1">Select Service</label>
           <select
             className="w-full border border-gray-300 rounded-lg px-4 py-3 
-                       focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
+                      focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
           >
             <option>Dental Consultation</option>
             <option>Teeth Cleaning</option>
@@ -181,20 +181,21 @@ const Home = () => {
           <input
             type="date"
             className="w-full border border-gray-300 rounded-lg px-4 py-3 
-                       focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
+                      focus:outline-none focus:ring-2 focus:ring-[#007B9C]"
           />
         </div>
 
         {/* Submit Button */}
         <button
-          className="w-full bg-[#007B9C] text-white py-3 rounded-lg font-semibold 
-                     tracking-wide shadow-md hover:bg-[#00566e] transition duration-300"
+          className="mask-btn w-full bg-[#007B9C] text-white py-3 rounded-lg font-semibold 
+                    tracking-wide shadow-md "
         >
           BOOK NOW
         </button>
 
       </form>
     </div>
+
 
   </div>
 </section>

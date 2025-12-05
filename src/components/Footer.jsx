@@ -4,83 +4,94 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1186b7] text-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        
-        {/* About Us */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">ABOUT US</h3>
-          <div className="w-12 h-[2px] bg-white mb-4 relative">
-            <span className="w-2 h-2 bg-white rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
+    <footer className="bg-gradient-to-r from-[#007B9C] to-[#1186b7] text-white relative overflow-hidden">
+      {/* Orange line at the top of the footer */}
+  <div className="w-full h-2 bg-orange-400"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        {/* About Us + Mini Map */}
+          <div className="bg-white/10 p-6 rounded-2xl shadow-lg backdrop-blur-md hover:shadow-2xl transition-all flex flex-col">
+            <h3 className="text-lg font-semibold mb-3 uppercase tracking-wider">About Us</h3>
+            <div className="w-12 h-[2px] bg-white mb-4 relative">
+              <span className="w-2 h-2 bg-white rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
+            </div>
+            <p className="text-sm leading-relaxed opacity-90 mb-4">
+              Welcome to Apollo Dentals, Bhubaneswar — your trusted multi-specialty dental clinic offering advanced treatments with modern technology and compassionate care. <span className="underline cursor-pointer hover:text-orange-400 transition">Read More</span>
+            </p>
+
+            {/* Full-width Mini Google Map */}
+            <div className="w-full rounded-xl overflow-hidden border-0 flex-1">
+              <iframe
+                title="Apollo Dentals Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.123456789!2d85.8289123!3d20.2961234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1901234567890%3A0xabcdef1234567890!2sApollo%20Dentals%2C%20Bhubaneswar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="120"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl"
+              ></iframe>
+            </div>
           </div>
-          <p className="text-sm leading-relaxed">
-            Welcome to Apollo Dental, a leading dental clinic in Himayatnagar, where we combine latest equipped dental care with a compassionate approach to ensure your smile is as healthy and beautiful as possible. Our clinic is dedicated to providing exceptional dental services for the entire family, and we take great pride in delivering personalized, high-quality care tailored to each.... <span className="underline cursor-pointer">Read More</span>
-          </p>
-        </div>
+
+
 
         {/* Quick Links */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">QUICK LINKS</h3>
+        <div className="bg-white/10 p-6 rounded-2xl shadow-lg backdrop-blur-md hover:shadow-2xl transition-all">
+          <h3 className="text-lg font-semibold mb-3 uppercase tracking-wider">Quick Links</h3>
           <div className="w-12 h-[2px] bg-white mb-4 relative">
             <span className="w-2 h-2 bg-white rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
           </div>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><span>+</span> About</li>
-            <li className="flex items-center gap-2"><span>+</span> Blog</li>
-            <li className="flex items-center gap-2"><span>+</span> Testimonials</li>
-            <li className="flex items-center gap-2"><span>+</span> Images</li>
-            <li className="flex items-center gap-2"><span>+</span> Videos</li>
-            <li className="flex items-center gap-2"><span>+</span> Contact</li>
-            <li className="flex items-center gap-2"><span>+</span> Pediatric Dentistry</li>
-            <li className="flex items-center gap-2"><span>+</span> Smile Designing</li>
-            <li className="flex items-center gap-2"><span>+</span> Laser Dentistry</li>
+            {["About","Blog","Testimonials","Gallery","Videos","Contact","Pediatric Dentistry","Smile Designing","Laser Dentistry"].map((item, idx) => (
+              <li key={idx} className="flex items-center gap-2 hover:text-orange-400 cursor-pointer transition">
+                <span className="text-white/80">+</span> {item}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Services */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">SERVICES</h3>
+        <div className="bg-white/10 p-6 rounded-2xl shadow-lg backdrop-blur-md hover:shadow-2xl transition-all">
+          <h3 className="text-lg font-semibold mb-3 uppercase tracking-wider">Services</h3>
           <div className="w-12 h-[2px] bg-white mb-4 relative">
             <span className="w-2 h-2 bg-white rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
           </div>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><span>+</span> Advanced Dentistry</li>
-            <li className="flex items-center gap-2"><span>+</span> Implants</li>
-            <li className="flex items-center gap-2"><span>+</span> Dental Crowns</li>
-            <li className="flex items-center gap-2"><span>+</span> Dental Bridges</li>
-            <li className="flex items-center gap-2"><span>+</span> Root Canal Treatment</li>
-            <li className="flex items-center gap-2"><span>+</span> Dentures</li>
-            <li className="flex items-center gap-2"><span>+</span> Gum Disease</li>
-            <li className="flex items-center gap-2"><span>+</span> Invisible Braces</li>
-            <li className="flex items-center gap-2"><span>+</span> Teeth Whitening</li>
+            {["Cosmetic Dentistry","Dental Implants","Crowns & Bridges","Root Canal Treatment","Orthodontics (Braces)","Full & Partial Dentures","Gum Care Treatments","Invisible/Aligner Braces","Teeth Whitening"].map((service, idx) => (
+              <li key={idx} className="flex items-center gap-2 hover:text-orange-400 cursor-pointer transition">
+                <span className="text-white/80">+</span> {service}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Contact Us */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">CONTACT US</h3>
+        <div className="bg-white/10 p-6 rounded-2xl shadow-lg backdrop-blur-md hover:shadow-2xl transition-all">
+          <h3 className="text-lg font-semibold mb-3 uppercase tracking-wider">Contact Us</h3>
           <div className="w-12 h-[2px] bg-white mb-4 relative">
             <span className="w-2 h-2 bg-white rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
           </div>
-          <p className="text-sm flex items-start gap-2">
-            <IoLocationOutline className="mt-1" /> Apollo Dental (Branch: Himayatnagar) Ground Floor, G.S Towers, Himayat Nagar Rd, opposite Maruthi Suzuki showroom, AP State Housing Board, Himayatnagar, Hyderabad, Telangana 500029
+          <p className="text-sm flex items-start gap-2 leading-relaxed">
+            <IoLocationOutline className="mt-1" /> Apollo Dentals, Bhubaneswar<br />
+            Plot No. 1243, Near Master Canteen Square,<br /> Janpath Road, Bhubaneswar, Odisha – 751001
           </p>
 
           {/* Social Icons */}
           <div className="flex items-center gap-3 mt-4">
-            <a href="#"><FaFacebookF className="w-5 h-5" /></a>
-            <a href="#"><FaTwitter className="w-5 h-5" /></a>
-            <a href="#"><FaLinkedinIn className="w-5 h-5" /></a>
-            <a href="#"><FaInstagram className="w-5 h-5" /></a>
-            <a href="#"><FaYoutube className="w-5 h-5" /></a>
-            <a href="#"><FaPinterestP className="w-5 h-5" /></a>
+            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaPinterestP].map((Icon, idx) => (
+              <a key={idx} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-orange-400 hover:text-white transition">
+                <Icon />
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Footer Bottom */}
       <div className="bg-[#007B9C] text-center py-4 text-sm">
-        Copyright ©2025 Apollo Dental Care All Rights Reserved | Designed By <strong>Delight Designs</strong>
+        Copyright ©2025 Apollo Dentals, Bhubaneswar. All Rights Reserved | Designed By <a href="https://marcadspro.com/" className="underline hover:text-orange-400"><strong>Marcads Pro</strong></a>
       </div>
     </footer>
   );

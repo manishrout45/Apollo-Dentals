@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import GlobalCursor from "./components/GlobalCursor";
 
 function App() {
   useEffect(() => {
@@ -21,7 +22,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop /> {/* Ensures page scroll resets on route change */}
       <Navbar />
-
+      <GlobalCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

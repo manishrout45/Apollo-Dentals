@@ -43,17 +43,17 @@ const ScrollPromo = () => {
         {/* Moving Text */}
         <div id="scrollText" className="space-y-4 sm:space-y-6 text-center">
 
-          <h2 className="main-heading text-white text-3xl sm:text-5xl font-bold leading-snug sm:leading-tight">
+          <h2 className="fade-right main-heading text-white text-3xl sm:text-5xl font-bold leading-snug sm:leading-tight">
             Smile Brighter <br /> This Month at Apollo Dentals!
           </h2>
 
-          <p className="text-white text-sm sm:text-lg font-semibold tracking-wide max-w-2xl mx-auto">
+          <p className="fade-up text-white text-sm sm:text-lg font-semibold tracking-wide max-w-2xl mx-auto">
             Get a **Comprehensive Dental Checkup** and 15% OFF on teeth cleaning this month. Book your appointment today!
           </p>
 
           <button
-            className="shine-btn mt-4 sm:mt-6 bg-white text-gray-900 font-semibold 
-                      px-4 sm:px-6 py-2 sm:py-3 shadow-sm hover:bg-gray-200 transition"
+            className="mask-btn mt-4 sm:mt-6 bg-white text-gray-900 font-semibold 
+                      px-4 sm:px-6 py-2 sm:py-3 shadow-sm hover:bg-gray-200 transition rounded-lg"
           >
             BOOK APPOINTMENT
           </button>

@@ -16,20 +16,27 @@ export default function AboutSection() {
 
       {/* Left Text Section */}
       <div className="w-full md:w-1/2 max-w-lg z-10 relative">
-        <h2 className="text-white text-2xl md:text-4xl font-bold leading-tight">
+        <h2 className="fade-right text-white text-2xl md:text-4xl font-bold leading-tight">
           About Us
         </h2>
 
-        <p className="text-white mt-3 text-sm md:text-base opacity-90">
+        <p className="fade-up text-white mt-3 text-sm md:text-base opacity-90">
           Apollo Dental Care Bhubaneswar is a trusted center for advanced dental treatments, 
           delivering quality care with compassion and expertise. 
           Our clinic is equipped with modern technology, experienced dentists, 
           and a patient-first approach to ensure comfortable, safe, and effective dental solutions. 
           From routine checkups to specialized procedures, we are committed to providing healthy, 
-          confident smiles for every patient.
+          confident smiles for every patient. 
+
+          We also focus on preventive dentistry to help you maintain optimal oral health, 
+          offering personalized treatment plans tailored to individual needs. 
+          Our team continuously updates their skills with the latest dental innovations, 
+          ensuring high-quality care for both children and adults. 
+          At Apollo Dental Care, your smile is our priority, and we strive to make every visit a positive experience.
+
         </p>
 
-        <button className="mt-5 bg-white text-[#007B9C] font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+        <button className="mask-btn mt-5 bg-white text-[#007B9C] font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
           Contact Us
         </button>
       </div>
@@ -84,16 +91,16 @@ export default function AboutSection() {
 
         {/* Right Content */}
 <div>
-  <h2 className="text-3xl md:text-4xl font-bold text-[#007B9C]">
+  <h2 className="fade-right text-3xl md:text-4xl font-bold text-[#007B9C]">
     Healthy Smiles Start Here!
   </h2>
 
-  <p className="text-gray-600 mt-4 text-sm leading-relaxed">
+  <p className="fade-up text-gray-600 mt-4 text-sm leading-relaxed">
     Experience gentle and trusted dental care for you and your family.
   </p>
 
   {/* Feature List */}
-  <div className="mt-6 space-y-4">
+  <div className="fade-up mt-6 space-y-4">
     <FeatureItem text="Advanced dental treatments with modern technology" />
     <FeatureItem text="Expert dentists for painless & comfortable procedures" />
     <FeatureItem text="Complete oral care: cleaning, fillings, root canals & more" />

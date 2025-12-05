@@ -13,16 +13,16 @@ export default function ServiceSection() {
         <div className="bg-[#007B9C] text-white rounded-2xl p-6 md:p-10 relative">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold">
+              <h2 className="fade-right text-2xl md:text-3xl font-bold">
                 Dental Services for Healthy Smiles
               </h2>
-              <p className="mt-2 text-sm md:text-base">
+              <p className="fade-up mt-2 text-sm md:text-base">
                 Explore our specialized treatments designed to give you the best oral
                 health and a confident smile.
               </p>
             </div>
 
-            <button className="bg-white text-[#007B9C] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 transition">
+            <button className="mask-btn bg-white text-[#007B9C] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 transition">
               Book an Appointment
             </button>
           </div>
@@ -33,8 +33,8 @@ export default function ServiceSection() {
   {/* Card 1 - General Dentistry */}
   <div className="bg-white text-gray-700 rounded-xl shadow-md p-5">
     <FaTooth className="text-[#007B9C] text-3xl mb-3" />
-    <h3 className="font-bold text-lg">General Dentistry</h3>
-    <p className="text-sm mt-1">
+    <h3 className="fade-right font-bold text-lg">General Dentistry</h3>
+    <p className="fade-up text-sm mt-1">
       Complete oral checkups, cleaning, fillings & preventive care.
     </p>
   </div>
@@ -42,8 +42,8 @@ export default function ServiceSection() {
   {/* Card 2 - Cosmetic Dentistry */}
   <div className="bg-white text-gray-700 rounded-xl shadow-md p-5">
     <FaTeeth className="text-[#007B9C] text-3xl mb-3" />
-    <h3 className="font-bold text-lg">Cosmetic Dentistry</h3>
-    <p className="text-sm mt-1">
+    <h3 className="fade-right font-bold text-lg">Cosmetic Dentistry</h3>
+    <p className="fade-up text-sm mt-1">
       Teeth whitening, veneers & full smile makeover treatments.
     </p>
   </div>
@@ -51,8 +51,8 @@ export default function ServiceSection() {
   {/* Card 3 - Pediatric Dentistry */}
   <div className="bg-white text-gray-700 rounded-xl shadow-md p-5">
     <FaChild className="text-[#007B9C] text-3xl mb-3" />
-    <h3 className="font-bold text-lg">Pediatric Dentistry</h3>
-    <p className="text-sm mt-1">
+    <h3 className="fade-right font-bold text-lg">Pediatric Dentistry</h3>
+    <p className="fade-up text-sm mt-1">
       Gentle dental care designed specially for children.
     </p>
   </div>
@@ -60,8 +60,8 @@ export default function ServiceSection() {
   {/* Card 4 - Dental Implants */}
   <div className="bg-white text-gray-700 rounded-xl shadow-md p-5">
     <FaTeethOpen className="text-[#007B9C] text-3xl mb-3" />
-    <h3 className="font-bold text-lg">Dental Implants</h3>
-    <p className="text-sm mt-1">
+    <h3 className="fade-right font-bold text-lg">Dental Implants</h3>
+    <p className="fade-up text-sm mt-1">
       Permanent, natural-looking tooth replacement options.
     </p>
   </div>
@@ -102,9 +102,9 @@ export default function ServiceSection() {
 
         {/* Right Content */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-800">Our Vision & Mission</h2>
+          <h2 className="fade-right text-3xl font-bold text-gray-800">Our Vision & Mission</h2>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="fade-up mt-4 text-gray-600 leading-relaxed">
             At Apollo Dental Care, our mission is to provide exceptional dental care 
             with precision, compassion, and the latest technology. We aim to make 
             every patient feel comfortable and confident throughout their treatment.
@@ -115,7 +115,7 @@ export default function ServiceSection() {
           </p>
 
           {/* Bullet Points */}
-          <ul className="mt-5 space-y-3 text-gray-700">
+          <ul className="fade-up mt-5 space-y-3 text-gray-700">
             <li className="flex items-center gap-3">
               <span className="bg-[#007B9C] w-3 h-3 rounded-full"></span>
               Advanced & Modern Dental Equipment
@@ -126,7 +126,7 @@ export default function ServiceSection() {
             </li>
           </ul>
 
-          <button className="mt-6 bg-[#007B9C] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[#046b85] transition">
+          <button className="mask-btn mt-6 bg-[#007B9C] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[#046b85] transition">
             Learn more
           </button>
         </div>

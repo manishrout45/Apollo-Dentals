@@ -87,7 +87,7 @@ const ExpertsSection = () => {
 
   return (
     <section className="relative w-full overflow-hidden py-6 bg-[#007B9C]">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
+      <h2 className="fade-right text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
         Meet Our <span className="text-white">Expert Specialists</span>
       </h2>
 

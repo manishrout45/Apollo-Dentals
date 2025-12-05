@@ -50,7 +50,7 @@ export default function Navbar() {
     {/* Phone */}
     <a
       href="tel:9876543210"
-      className="flex items-center space-x-1 sm:space-x-2 hover:text-orange-500 transition"
+      className="flex items-center space-x-1 sm:space-x-2 hover:text-orange-400 transition"
     >
       <FaPhoneAlt className="text-base sm:text-lg" />
       <span className="text-xs sm:text-sm">9876543210</span>
@@ -59,7 +59,7 @@ export default function Navbar() {
     {/* Email (Hidden on mobile) */}
     <a
       href="mailto:info@example.com"
-      className="hidden md:flex items-center space-x-2 hover:text-orange-500 transition"
+      className="hidden md:flex items-center space-x-2 hover:text-orange-400 transition"
     >
       <FaEnvelope className="text-lg" />
       <span>info@example.com</span>
@@ -141,7 +141,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <a
               href="/appointment"
-              className="bg-orange-500 text-white px-4 py-2 rounded font-semibold hover:bg-orange-600"
+              className="mask-btn bg-orange-500 text-white px-4 py-2 rounded font-semibold hover:bg-orange-600"
             >
               APPOINTMENT
             </a>
@@ -223,7 +223,7 @@ export default function Navbar() {
 
             <a
               href="/appointment"
-              className="px-4 py-3 bg-orange-500 text-white mt-2 text-center"
+              className="mask-btn px-4 py-3 bg-orange-500 text-white mt-2 text-center"
             >
               APPOINTMENT
             </a>
