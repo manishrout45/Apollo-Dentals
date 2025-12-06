@@ -23,7 +23,7 @@ She is very passionate about educating patients and answering their questions to
   {
     name: "Dr. Robert Wilson",
     title: "BDS",
-    img: "https://via.placeholder.com/150",
+    img: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_1280.png",
     description:
       "Specialist in Dental Care with advanced cosmetic dentistry expertise.",
     experience: "10+ Years of Practice",
@@ -38,7 +38,7 @@ She is very passionate about educating patients and answering their questions to
   {
     name: "Dr. Emily Davis",
     title: "BDS",
-    img: "https://via.placeholder.com/150",
+    img: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_1280.png",
     description: "Certified psychologist helping patients with mental wellness.",
     experience: "10+ Years of Counseling Experience",
     location: "Bhubaneswar",
