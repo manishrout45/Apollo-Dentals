@@ -42,7 +42,7 @@ export default function Navbar() {
       <FaLinkedinIn className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
       <FaInstagram className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
       <FaYoutube className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
-      <FaPinterest className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+
     </div>
 
     {/* Contact Info */}

@@ -80,7 +80,7 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex items-center gap-3 mt-4">
-            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaPinterestP].map((Icon, idx) => (
+            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube].map((Icon, idx) => (
               <a key={idx} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-orange-400 hover:text-white transition">
                 <Icon />
               </a>

@@ -82,8 +82,8 @@ export default function AboutSection() {
 
   {/* Phone Overlay */}
   <img
-    src="/assets/images/abtphone.png"
-    alt="app"
+    src=""
+    alt=""
     className="absolute right-10 bottom-0 w-32 md:w-48 lg:w-48 drop-shadow-xl z-10"
   />
 </div>
