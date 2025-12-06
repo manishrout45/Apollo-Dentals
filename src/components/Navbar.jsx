@@ -32,41 +32,44 @@ export default function Navbar() {
   return (
     <header className="w-full fixed top-0 left-0  z-50">
       {/* Top Bar */}
-<div className="bg-[#007B9C]  text-white text-xs sm:text-sm  py-1 ">
-<div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-  {/* Social Icons */}
-  <div className="flex items-center space-x-2 sm:space-x-3">
-    <FaFacebookF className="bg-orange-500 p-1 rounded-full text-lg sm:text-xl" />
-    <FaTwitter className="bg-orange-500 p-1 rounded-full text-lg sm:text-xl" />
-    <FaLinkedinIn className="bg-orange-500 p-1 rounded-full text-lg sm:text-xl" />
-    <FaInstagram className="bg-orange-500 p-1 rounded-full text-lg sm:text-xl" />
-    <FaYoutube className="bg-orange-500 p-1 rounded-full text-lg sm:text-xl" />
-    <FaPinterest className="bg-orange-500 p-1 rounded-full text-lg sm:text-xl" />
-  </div>
+<div className="bg-[#F37221] text-[#007B9C] text-xs sm:text-sm py-1">
+  <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
 
-  {/* Contact Info */}
-  <div className="flex items-center space-x-4">
+    {/* Social Icons */}
+    <div className="flex items-center space-x-2 sm:space-x-3">
+      <FaFacebookF className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+      <FaTwitter className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+      <FaLinkedinIn className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+      <FaInstagram className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+      <FaYoutube className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+      <FaPinterest className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+    </div>
 
-    {/* Phone */}
-    <a
-      href="tel:9876543210"
-      className="flex items-center space-x-1 sm:space-x-2 hover:text-orange-400 transition"
-    >
-      <FaPhoneAlt className="text-base sm:text-lg" />
-      <span className="text-xs sm:text-sm">9876543210</span>
-    </a>
+    {/* Contact Info */}
+    <div className="flex items-center space-x-4">
 
-    {/* Email (Hidden on mobile) */}
-    <a
-      href="mailto:info@example.com"
-      className="hidden md:flex items-center space-x-2 hover:text-orange-400 transition"
-    >
-      <FaEnvelope className="text-lg" />
-      <span>info@example.com</span>
-    </a>
+      {/* Phone */}
+      <a
+        href="tel:9876543210"
+        className="flex items-center space-x-1 sm:space-x-2 hover:text-white transition font-semibold"
+      >
+        <FaPhoneAlt className="text-base sm:text-lg text-white" />
+        <span className="text-xs sm:text-sm text-white">9876543210</span>
+      </a>
+
+      {/* Email (Hidden on mobile) */}
+      <a
+        href="mailto:info@example.com"
+        className="hidden md:flex items-center space-x-2 hover:text-white transition font-semibold"
+      >
+        <FaEnvelope className="text-lg text-white" />
+        <span className="text-white">info@example.com</span>
+      </a>
+
+    </div>
   </div>
 </div>
-</div>
+
 
       {/* Main Navbar */}
       <div className="bg-white backdrop-blur-md shadow-md sticky top-0 z-50">

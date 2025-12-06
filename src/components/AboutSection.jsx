@@ -67,10 +67,10 @@ export default function AboutSection() {
   {/* Black Abstract Shape */}
   <div className="absolute -bottom-6 left-16 w-32 h-32 md:w-40 md:h-40">
     {/* Top rounded block */}
-    <div className="bg-black w-20 h-20 md:w-24 md:h-24 rounded-3xl absolute top-0 left-0"></div>
+    <div className="bg-[#007B9C] w-20 h-20 md:w-24 md:h-24 rounded-3xl absolute top-0 left-0"></div>
 
     {/* Bottom rounded block */}
-    <div className="bg-black w-20 h-20 md:w-24 md:h-24 rounded-3xl absolute bottom-0 right-0"></div>
+    <div className="bg-[#007B9C] w-20 h-20 md:w-24 md:h-24 rounded-3xl absolute bottom-0 right-0"></div>
   </div>
 
   {/* Nurse Image */}

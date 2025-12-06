@@ -19,47 +19,68 @@ export default function HeroSection() {
           </p>
 
           {/* Appointment Box */}
-          <div className="bg-white shadow-lg rounded-lg p-4 mt-6">
-            <h3 className="fade-right font-semibold text-gray-700 mb-3">Book an appointment</h3>
+{/* Appointment Box */}
+<div className="bg-white shadow-xl rounded-2xl p-6 mt-8 border border-gray-100">
+  <h3 className="fade-right font-semibold text-orange-600 text-lg mb-4">
+    Book a Dental Appointment
+  </h3>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              
-              {/* Location */}
-              <div className="flex items-center border rounded-lg px-3 py-2 gap-2">
-                <FaMapMarkerAlt className="text-[#007B9C]" />
-                <select className="w-full outline-none text-gray-600 text-sm">
-                  <option>Bhubaneswar,Odisha </option>
-                  <option>Delhi, India</option>
-                  <option>Dubai, UAE</option>
-                </select>
-              </div>
+  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-              {/* Date */}
-              <div className="flex items-center border rounded-lg px-3 py-2 gap-2">
-                <FaCalendarAlt className="text-[#007B9C]" />
-                <input
-                  type="date"
-                  className="w-full outline-none text-gray-600 text-sm"
-                />
-              </div>
+    {/* Patient Name */}
+    <div className="flex items-center border rounded-xl px-4 py-3 gap-2 bg-gray-50">
+      <i className="fa-solid fa-user text-[#007B9C] text-lg"></i>
+      <input
+        type="text"
+        placeholder="Full Name"
+        className="w-full bg-transparent outline-none text-gray-700 text-sm"
+      />
+    </div>
 
-              {/* Doctor Type */}
-              <div className="flex items-center border rounded-lg px-3 py-2 gap-2">
-                <FaUserMd className="text-[#007B9C]" />
-                <select className="w-full outline-none text-gray-600 text-sm">
-                  <option>All Health Services</option>
-                  <option>Dentist</option>
-                  <option>Cardiologist</option>
-                  <option>Dermatologist</option>
-                </select>
-              </div>
+    {/* Phone Number */}
+    <div className="flex items-center border rounded-xl px-4 py-3 gap-2 bg-gray-50">
+      <i className="fa-solid fa-phone text-[#007B9C] text-lg"></i>
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        className="w-full bg-transparent outline-none text-gray-700 text-sm"
+      />
+    </div>
 
-              {/* Search Button */}
-              <button className="mask-btn bg-[#00C16E] text-white font-semibold rounded-lg px-3 py-2 hover:bg-[#00aa5e]">
-                Search →
-              </button>
-            </div>
-          </div>
+    {/* Date Selection */}
+    <div className="flex items-center border rounded-xl px-4 py-3 gap-2 bg-gray-50">
+      <FaCalendarAlt className="text-[#007B9C] text-lg" />
+      <input
+        type="date"
+        className="w-full bg-transparent outline-none text-gray-700 text-sm"
+      />
+    </div>
+
+    {/* Dental Specialist Type */}
+    <div className="flex items-center border rounded-xl px-4 py-3 gap-2 bg-gray-50">
+      <FaUserMd className="text-[#007B9C] text-lg" />
+      <select className="w-full bg-transparent outline-none text-gray-700 text-sm">
+        <option>General Dentist</option>
+        <option>Orthodontist (Braces Specialist)</option>
+        <option>Endodontist (Root Canal Specialist)</option>
+        <option>Periodontist (Gum Specialist)</option>
+        <option>Oral Surgeon</option>
+        <option>Pediatric Dentist</option>
+        <option>Cosmetic Dentistry</option>
+      </select>
+    </div>
+
+    {/* BOOK APPOINTMENT BUTTON */}
+    <button
+      className="mask-btn bg-[#00C16E] text-white font-semibold rounded-xl px-4 py-3 
+                 hover:bg-[#00aa5e] transition-all duration-300 shadow-md sm:col-span-2 lg:col-span-4"
+    >
+      Book Appointment →
+    </button>
+
+  </div>
+</div>
+
         </div>
 
                {/* RIGHT IMAGE */}
@@ -72,15 +93,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* LOGO SLIDER SECTION */}
+      {/* LOGO SLIDER SECTION 
       <div className="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 opacity-70">
-        <img src="/assets/hero/logo1.png" alt="logo" className="w-full" />
+        <img src="/assets/images/logo/invisalign-logo.png" alt="logo" className="w-full" />
         <img src="/assets/hero/logo2.png" alt="logo" className="w-full" />
         <img src="/assets/hero/logo3.png" alt="logo" className="w-full" />
         <img src="/assets/hero/logo4.png" alt="logo" className="w-full" />
         <img src="/assets/hero/logo5.png" alt="logo" className="w-full" />
         <img src="/assets/hero/logo6.png" alt="logo" className="w-full" />
-      </div>
+      </div>*/}
     </section>
   );
 }
