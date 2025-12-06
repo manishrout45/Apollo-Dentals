@@ -54,7 +54,7 @@ const Home = () => {
             {/* Box 1 */}
             <div className="bg-[#007B9C] text-white rounded-xl p-6 text-center shadow-md 
                             hover:shadow-xl hover:-translate-y-1 transition">
-              <h3 className="text-3xl font-bold">600</h3>
+              <h3 className="text-3xl font-bold">10</h3>
               <p className="text-sm mt-1 opacity-90">
                 Years of experience<br />of our medical staff
               </p>
@@ -63,7 +63,7 @@ const Home = () => {
             {/* Box 2 */}
             <div className="bg-white rounded-xl p-6 text-center shadow-md border
                             hover:shadow-xl hover:-translate-y-1 transition">
-              <h3 className="text-3xl font-bold text-gray-800">30</h3>
+              <h3 className="text-3xl font-bold text-gray-800">10</h3>
               <p className="text-sm mt-1 text-gray-500">
                 Years our doctors have<br />been serving patients
               </p>
@@ -72,7 +72,7 @@ const Home = () => {
             {/* Box 3 */}
             <div className="bg-white rounded-xl p-6 text-center shadow-md border
                             hover:shadow-xl hover:-translate-y-1 transition">
-              <h3 className="text-3xl font-bold text-gray-800">60</h3>
+              <h3 className="text-3xl font-bold text-gray-800">10</h3>
               <p className="text-sm mt-1 text-gray-500">
                 Certified specialists in<br />psychology & psychiatry
               </p>
