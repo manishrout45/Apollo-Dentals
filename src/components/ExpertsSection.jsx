@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaUserMd, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 
 const specialists = [
@@ -12,9 +12,7 @@ const specialists = [
     location: "Bhubaneswar",
     details: `
       Dr Shyamli Balaram is a highly enthusiastic general and cosmetic dentist who has complete has Bachelor in Dental Surgery from Kalinga Institute of Dental sciences ( KIIT University) , Bhubaneswar in the year 2020 and has been practicing dentistry ever since.  
-Dr Shyamli is a highly skilled Dental surgeon who stays on top of latest advancements in the world of dentistry. She specialises in Rotary Endodontics, Asthetic Dentistry, Laser Dentistry paediatric and Preventive Dentistry. She is an expert in explaining treatment options to patients, performing non surgical and surgical procedures while minimising patient discomfort. 
-She is very passionate about educating patients and answering their questions to reduce patients concerns , anxiety and overcome their fear towards dentistry.  
-
+      Dr Shyamli is a highly skilled Dental surgeon who stays on top of latest advancements in the world of dentistry. She specialises in Rotary Endodontics, Asthetic Dentistry, Laser Dentistry paediatric and Preventive Dentistry. 
       EDUCATION-
       • Bachelors in Dental Surgery 
       • Fellowship in Restorative and clinical dentistry from IOM , Hong Kong.
@@ -52,7 +50,6 @@ She is very passionate about educating patients and answering their questions to
 ];
 
 const ExpertsSection = () => {
-  const sliderRef = useRef(null);
   const [openModal, setOpenModal] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
 
@@ -63,57 +60,20 @@ const ExpertsSection = () => {
 
   const closeModal = () => setOpenModal(false);
 
-  useEffect(() => {
-    const slider = sliderRef.current;
-    let currentIndex = 0;
-
-    const getScrollAmount = () => {
-      if (window.innerWidth >= 1024) return 350;
-      if (window.innerWidth >= 640) return 320;
-      return slider.clientWidth * 0.9;
-    };
-
-    const scrollStep = () => {
-      const amount = getScrollAmount();
-      currentIndex++;
-
-      slider.scrollTo({
-        left: amount * currentIndex,
-        behavior: "smooth",
-      });
-
-      if (currentIndex >= specialists.length) {
-        setTimeout(() => {
-          slider.scrollTo({ left: 0, behavior: "auto" });
-          currentIndex = 0;
-        }, 500);
-      }
-    };
-
-    const interval = setInterval(scrollStep, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
       {/* SECTION */}
-      <section className="relative w-full overflow-hidden py-14 bg-[#007B9C]">
+      <section className="relative w-full py-14 bg-[#007B9C]">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
           Meet Our <span className="text-orange-400">Expert Specialists</span>
         </h2>
 
-        {/* Slider */}
-        <div
-          ref={sliderRef}
-          className="flex justify-center overflow-x-auto scroll-smooth no-scrollbar 
-          space-x-8 px-6 sm:px-8 lg:px-12 py-10"
-        >
+        {/* GRID — 1 column mobile, 3 columns tablet & desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-6">
           {specialists.map((specialist, index) => (
             <div
               key={index}
-              className="w-[95%] sm:w-[260px] lg:w-[340px] bg-white 
-              rounded-3xl shadow-lg p-7 text-center hover:shadow-2xl 
-              hover:-translate-y-2 transition-all flex-shrink-0"
+              className="w-full bg-white rounded-3xl shadow-lg p-7 text-center hover:shadow-2xl hover:-translate-y-2 transition-all"
             >
               {/* Image */}
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-4 border-[#73d6f1]">
@@ -147,20 +107,16 @@ const ExpertsSection = () => {
                 <p className="text-gray-700 text-sm">{specialist.location}</p>
               </div>
 
-              {/* BUTTONS — SIDE BY SIDE */}
+              {/* Buttons */}
               <div className="flex gap-3 justify-center">
                 <button
                   onClick={() => handleMoreDetails(specialist)}
-                  className="bg-[#007B9C] text-white px-4 py-2 rounded-full 
-                  text-sm font-semibold hover:bg-orange-500 transition-all"
+                  className="bg-[#007B9C] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-500 transition-all"
                 >
                   More Details
                 </button>
 
-                <button
-                  className="bg-orange-500 text-white px-4 py-2 rounded-full 
-                  text-sm font-semibold hover:bg-[#007B9C] transition-all"
-                >
+                <button className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#007B9C] transition-all">
                   Appointment
                 </button>
               </div>
@@ -169,13 +125,10 @@ const ExpertsSection = () => {
         </div>
       </section>
 
-      {/* POPUP MODAL */}
+      {/* MODAL */}
       {openModal && selectedDoctor && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4 z-50">
-          <div className="bg-white rounded-2xl shadow-xl p-6 
-          w-full max-w-3xl max-h-[80vh] overflow-y-auto relative">
-
-            {/* Close */}
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-3xl max-h-[80vh] overflow-y-auto relative">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-gray-600 hover:text-black text-xl"
@@ -183,10 +136,7 @@ const ExpertsSection = () => {
               ✖
             </button>
 
-            {/* Content */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-
-              {/* Image */}
               <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#73d6f1]">
                 <img
                   src={selectedDoctor.img}
@@ -195,7 +145,6 @@ const ExpertsSection = () => {
                 />
               </div>
 
-              {/* Text Section */}
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-gray-800">
                   {selectedDoctor.name}
@@ -209,9 +158,7 @@ const ExpertsSection = () => {
                   {selectedDoctor.details}
                 </p>
 
-                {/* Appointment Button */}
-                <button className="mt-5 bg-[#007B9C] text-white px-6 py-2 rounded-full 
-                text-sm font-semibold hover:bg-orange-500 transition-all">
+                <button className="mt-5 bg-[#007B9C] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-orange-500 transition-all">
                   Book Appointment
                 </button>
               </div>
