@@ -3,6 +3,8 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingButtons from "./components/FloatingButtons";
+
 
 // Page imports
 import Home from "./pages/Home";
@@ -23,6 +25,7 @@ function App() {
       <ScrollToTop /> {/* Ensures page scroll resets on route change */}
       <Navbar />
       <GlobalCursor />
+      <FloatingButtons />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
