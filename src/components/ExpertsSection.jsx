@@ -131,7 +131,7 @@ const ExpertsSection = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-3xl max-h-[80vh] overflow-y-auto relative">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-black text-xl"
+              className="absolute top-4 right-4 text-[#007B9C] hover:text-black text-xl"
             >
               ✖
             </button>
