@@ -5,7 +5,6 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaYoutube,
-  FaPinterest,
   FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
@@ -30,51 +29,51 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <header className="w-full fixed top-0 left-0  z-50">
-      {/* Top Bar */}
-<div className="bg-[#F37221] text-[#007B9C] text-xs sm:text-sm py-1">
-  <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+    <header className="w-full fixed top-0 left-0 z-50">
 
-    {/* Social Icons */}
-    <div className="flex items-center space-x-2 sm:space-x-3">
-      <FaFacebookF className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
-      <FaTwitter className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
-      <FaLinkedinIn className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
-      <FaInstagram className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
-      <FaYoutube className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+      {/* -------------------- TOP ORANGE BAR -------------------- */}
+      <div className="bg-[#F37221] text-[#007B9C] text-xs sm:text-sm py-1">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
 
-    </div>
+          {/* Social Icons */}
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <FaFacebookF className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+            <FaTwitter className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+            <FaLinkedinIn className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+            <FaInstagram className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+            <FaYoutube className="bg-white p-1 rounded-full text-lg sm:text-xl text-[#007B9C]" />
+          </div>
 
-    {/* Contact Info */}
-    <div className="flex items-center space-x-4">
+          {/* Contact Info */}
+          <div className="flex items-center space-x-4">
+            <a
+              href="tel:9876543210"
+              className="flex items-center space-x-2 hover:text-white transition font-semibold"
+            >
+              <FaPhoneAlt className="text-lg text-white" />
+              <span className="text-white">9876543210</span>
+            </a>
 
-      {/* Phone */}
-      <a
-        href="tel:9876543210"
-        className="flex items-center space-x-1 sm:space-x-2 hover:text-white transition font-semibold"
-      >
-        <FaPhoneAlt className="text-base sm:text-lg text-white" />
-        <span className="text-xs sm:text-sm text-white">9876543210</span>
-      </a>
+            <a
+              href="mailto:info@example.com"
+              className="hidden md:flex items-center space-x-2 hover:text-white transition font-semibold"
+            >
+              <FaEnvelope className="text-lg text-white" />
+              <span className="text-white">info@example.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      {/* Email (Hidden on mobile) */}
-      <a
-        href="mailto:info@example.com"
-        className="hidden md:flex items-center space-x-2 hover:text-white transition font-semibold"
-      >
-        <FaEnvelope className="text-lg text-white" />
-        <span className="text-white">info@example.com</span>
-      </a>
+      {/* -------------------- MAIN NAVBAR (UPDATED DESKTOP DESIGN) -------------------- */}
+      <div className="bg-white shadow-md relative">
 
-    </div>
-  </div>
-</div>
+        {/* Blue Angular Strip */}
+        <div className="absolute left-40 top-0 h-[10px] w-full bg-[#0A8CA2] transform -skew-x-[130deg] origin-left"></div>
 
-
-      {/* Main Navbar */}
-      <div className="bg-white backdrop-blur-md shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Logo */}
+
+          {/* Logo Left */}
           <div className="flex flex-col items-start">
             <img
               src="/assets/images/logo/logo.jpg"
@@ -86,50 +85,37 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Desktop Menu (Only large screens) */}
-          <nav className="hidden lg:flex space-x-6 items-center text-sm xl:text-base">
+          {/* Desktop Menu */}
+          <nav className="hidden lg:flex space-x-8 items-center text-sm font-semibold text-gray-700">
+
             <a href="/" className={isActive("/")}>HOME</a>
 
-            {/* ABOUT Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setAboutOpen(!aboutOpen)}
-                className={`${isActive("/about-us")}`}
-              >
-                ABOUT
-              </button>
+            {/* ABOUT */}
+            <div className="relative group">
+              <button className={`${isActive("/about-us")}`}>ABOUT</button>
 
-              {aboutOpen && (
-                <div className="absolute bg-white shadow-md mt-2 rounded w-40 z-50 animate-fadeIn">
-                  <a href="/about-us" className="block px-4 py-2 hover:bg-gray-100">
-                    About Us
-                  </a>
-                  <a href="/team" className="block px-4 py-2 hover:bg-gray-100">
-                    Our Team
-                  </a>
-                </div>
-              )}
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded w-40 mt-2 z-50">
+                <a href="/about-us" className="block px-4 py-2 hover:bg-gray-100">
+                  About Us
+                </a>
+                <a href="/team" className="block px-4 py-2 hover:bg-gray-100">
+                  Our Team
+                </a>
+              </div>
             </div>
 
-            {/* SPECIALTIES Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setSpecialtiesOpen(!specialtiesOpen)}
-                className={`${isActive("/orthodontics")}`}
-              >
-                SPECIALTIES
-              </button>
+            {/* SPECIALTIES */}
+            <div className="relative group">
+              <button className={`${isActive("/orthodontics")}`}>SPECIALTIES</button>
 
-              {specialtiesOpen && (
-                <div className="absolute bg-white shadow-md mt-2 rounded w-40 z-50 animate-fadeIn">
-                  <a href="/orthodontics" className="block px-4 py-2 hover:bg-gray-100">
-                    Orthodontics
-                  </a>
-                  <a href="/cosmetic-dentistry" className="block px-4 py-2 hover:bg-gray-100">
-                    Cosmetic Dentistry
-                  </a>
-                </div>
-              )}
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded w-40 mt-2 z-50">
+                <a href="/orthodontics" className="block px-4 py-2 hover:bg-gray-100">
+                  Orthodontics
+                </a>
+                <a href="/cosmetic-dentistry" className="block px-4 py-2 hover:bg-gray-100">
+                  Cosmetic Dentistry
+                </a>
+              </div>
             </div>
 
             <a href="/testimonials" className={isActive("/testimonials")}>
@@ -140,17 +126,17 @@ export default function Navbar() {
             <a href="/contact" className={isActive("/contact")}>CONTACT</a>
           </nav>
 
-          {/* Appointment Button (Large screens) */}
+          {/* Appointment Button */}
           <div className="hidden lg:block">
             <a
               href="/appointment"
-              className="mask-btn bg-orange-500 text-white px-4 py-2 rounded font-semibold hover:bg-orange-600"
+              className="bg-[#F37221] text-white px-5 py-2 rounded font-semibold shadow hover:bg-[#df5f18] transition"
             >
               APPOINTMENT
             </a>
           </div>
 
-          {/* Hamburger for Mobile + Tablet */}
+          {/* Hamburger (Mobile) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden text-[#007B9C] transition-transform duration-300"
@@ -163,16 +149,17 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile & Tablet Menu */}
+        {/* -------------------- MOBILE MENU -------------------- */}
         <div
           className={`lg:hidden transition-all duration-500 overflow-hidden ${
             mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="bg-white shadow-md flex flex-col text-sm">
+
             <a href="/" className={`px-4 py-3 ${isActive("/")}`}>HOME</a>
 
-            {/* ABOUT */}
+            {/* ABOUT MOBILE */}
             <div className="px-4 py-3">
               <button
                 onClick={() => setAboutOpen(!aboutOpen)}
@@ -180,6 +167,7 @@ export default function Navbar() {
               >
                 ABOUT
               </button>
+
               <div
                 className={`transition-all duration-500 overflow-hidden ${
                   aboutOpen ? "max-h-40" : "max-h-0"
@@ -194,7 +182,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* SPECIALTIES */}
+            {/* SPECIALTIES MOBILE */}
             <div className="px-4 py-3">
               <button
                 onClick={() => setSpecialtiesOpen(!specialtiesOpen)}
@@ -226,7 +214,7 @@ export default function Navbar() {
 
             <a
               href="/appointment"
-              className="mask-btn px-4 py-3 bg-orange-500 text-white mt-2 text-center"
+              className="px-4 py-3 bg-[#F37221] text-white mt-2 text-center font-semibold"
             >
               APPOINTMENT
             </a>
