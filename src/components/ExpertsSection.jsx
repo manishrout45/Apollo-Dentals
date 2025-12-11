@@ -3,16 +3,16 @@ import { FaUserMd, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 
 const specialists = [
   {
-    name: "Dr. Shyamli Balaram",
+    name: "Dr. Shivani Mehra",
     title: "BDS",
-    img: "/assets/images/Dr Shyamli Balaram.jpeg",
+    img: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_1280.png",
     description:
       "Fellowship in Restorative and Clinical Dentistry, Laser and Cosmetic Dentist.",
     experience: "7+ Years of Clinical Experience",
     location: "Bhubaneswar",
     details: `
-      Dr Shyamli Balaram is a highly enthusiastic general and cosmetic dentist who has complete has Bachelor in Dental Surgery from Kalinga Institute of Dental sciences ( KIIT University) , Bhubaneswar in the year 2020 and has been practicing dentistry ever since.  
-      Dr Shyamli is a highly skilled Dental surgeon who stays on top of latest advancements in the world of dentistry. She specialises in Rotary Endodontics, Asthetic Dentistry, Laser Dentistry paediatric and Preventive Dentistry. 
+      Dr Shivani is a highly enthusiastic general and cosmetic dentist who has complete has Bachelor in Dental Surgery from XYZ university in 1995.
+      Dr Shivani is a highly skilled Dental surgeon who stays on top of latest advancements in the world of dentistry. She specialises in Rotary Endodontics, Asthetic Dentistry, Laser Dentistry paediatric and Preventive Dentistry. 
       EDUCATION-
       • Bachelors in Dental Surgery 
       • Fellowship in Restorative and clinical dentistry from IOM , Hong Kong.
