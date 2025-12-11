@@ -91,7 +91,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="bg-[#007B9C] text-center py-4 text-sm">
-        Copyright ©2025 Apollo Dentals, Bhubaneswar. All Rights Reserved | Designed By <a href="https://marcadspro.com/" className="underline hover:text-orange-400"><strong>Marcads Pro</strong></a>
+        Copyright ©2025 Apollo Dentals, Bhubaneswar. All Rights Reserved | Designed By <a href="" className="underline hover:text-orange-400"><strong>Manish</strong></a>
       </div>
     </footer>
   );
